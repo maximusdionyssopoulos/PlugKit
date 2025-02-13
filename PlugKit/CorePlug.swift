@@ -5,10 +5,6 @@
 //  Created by Maximus Dionyssopoulos on 13/2/2025.
 //
 
-
-//
-//  Created by Maximus Dionyssopoulos on 13/2/2025.
-
 import CoreBluetooth
 
 
