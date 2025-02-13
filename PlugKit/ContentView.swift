@@ -9,11 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var bluetoothManager = CorePlug()
+    var isConnected: Bool {
+        bluetoothManager.smartPlug?.state == .connected && bluetoothManager.smartPlug != nil
+    }
     
     var body: some View {
         VStack {
             // TODO: Add Loading/Connecting State
-            Text("Plug name: \(bluetoothManager.smartPlug?.name)")
+            if !isConnected {
+                Text("Connecting...")
+            } else {
+                Text("Plug name: \(bluetoothManager.smartPlug!.name ?? "")")
+                Text("State: \(bluetoothManager.smartPlug!.state.string)")
+            }
+            
             Toggle(isOn: $bluetoothManager.isSmartPlugOn) {
                 Text("Hue Plug")
             }
@@ -21,7 +30,7 @@ struct ContentView: View {
 //            .onChange(of: bluetoothManager.isSmartPlugOn) { old, new in
 //                bluetoothManager.togglePlug()
 //            }
-            .disabled(true)
+            .disabled(!isConnected)
             .keyboardShortcut("H", modifiers: [.option, .control])
             Divider()
             Button("Quit") {

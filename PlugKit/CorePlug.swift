@@ -13,7 +13,7 @@ import CoreBluetooth
 
 
 class CorePlug: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, ObservableObject {
-    @Published var smartPlug: CBPeripheral?
+    @Published var  smartPlug: CBPeripheral?
     @Published var isSmartPlugOn: Bool = false
     
     private var centralManager: CBCentralManager!
