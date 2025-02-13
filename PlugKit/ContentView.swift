@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var plugOn = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            Toggle(isOn: $plugOn) {
+                Text("Hue Plug")
+            }
+            .keyboardShortcut("H", modifiers: [.option, .control])
+            Divider()
+            Button("Quit") {
+                
+            }
+            .keyboardShortcut("Q")
         }
-        .padding()
     }
 }
 

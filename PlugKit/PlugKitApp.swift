@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct PlugKitApp: App {
+    
     var body: some Scene {
-        WindowGroup {
+        MenuBarExtra {
             ContentView()
+        } label: {
+            Label("Smart Plug", systemImage: "powerplug.portrait.fill")
         }
     }
 }
