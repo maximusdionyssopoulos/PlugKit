@@ -14,12 +14,20 @@ import CoreBluetooth
 
 class CorePlug: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, ObservableObject {
     @Published var  smartPlug: CBPeripheral?
-    @Published var isSmartPlugOn: Bool = false
+    @Published var isSmartPlugOn: Bool = false {
+        didSet {
+            if !isUpdatingFromPeripheral {
+                togglePlug()
+            }
+        }
+    }
     
     private var centralManager: CBCentralManager!
     private var targetCharacteristic: CBCharacteristic?
     let serviceUUID = CBUUID(string: "932c32bd-0000-47a2-835a-a8d455b859dd")
     let characteristicUUID = CBUUID(string: "932C32BD-0002-47A2-835A-A8D455B859DD")
+    
+    private var isUpdatingFromPeripheral = false
     
     enum SmartPlugState {
         case on
@@ -64,12 +72,7 @@ class CorePlug: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, Observ
     }
     
     // Tells the delegate the central manager discovered a peripheral while scanning for devices.
-    internal func centralManager(
-        _ central: CBCentralManager,
-        didDiscover peripheral: CBPeripheral,
-        advertisementData: [String: Any],
-        rssi RSSI: NSNumber
-    ) {
+    internal func centralManager(_ central: CBCentralManager,didDiscover peripheral: CBPeripheral,advertisementData: [String: Any],rssi RSSI: NSNumber) {
         // TODO: Should make this a setting
         if peripheral.name == "Hue smart plug" {
             print("Found Hue smart plug")
@@ -149,6 +152,9 @@ class CorePlug: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, Observ
             return
         }
         
+        // Set the flag to prevent togglePlug() from being called
+        isUpdatingFromPeripheral = true
+        
         if data == SmartPlugState.on.value {
             print("Smart plug is on")
             isSmartPlugOn = true
@@ -158,6 +164,9 @@ class CorePlug: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, Observ
         } else {
             print("Unknown smart plug state: \(data)")
         }
+        
+        // Reset the flag after updating the state
+        isUpdatingFromPeripheral = false
     }
     
     // This is called when a characteristic's value is written
@@ -206,16 +215,13 @@ class CorePlug: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate, Observ
         }
         
         // default to turn off
-        var command: UInt8 = 0x00  // Changed from Int8 to UInt8
-        if !isSmartPlugOn {  // Assuming isSmartPlugOn is a boolean property
+        var command: UInt8 = SmartPlugState.off.value
+        if isSmartPlugOn {
             // already off so turn it on
-            command = 0x01
+            command = SmartPlugState.on.value
         }
         
-        let data = Data([command])  // Use array literal to create Data
+        let data = Data([command])
         smartPlug.writeValue(data, for: characteristic, type: .withResponse)
-        
-        // Update the state after sending the command
-        isSmartPlugOn = !isSmartPlugOn
     }
 }
