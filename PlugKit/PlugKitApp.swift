@@ -14,7 +14,7 @@ struct PlugKitApp: App {
         MenuBarExtra {
             ContentView()
         } label: {
-            Label("Smart Plug", systemImage: "powerplug.portrait.fill")
+            Label("PlugKit", systemImage: "powerplug.portrait.fill")
         }
     }
 }
