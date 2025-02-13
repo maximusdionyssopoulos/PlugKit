@@ -6,63 +6,33 @@
 	objectVersion = 77;
 	objects = {
 
-/* Begin PBXContainerItemProxy section */
-		D4F02ADC2D5DBBE60040B73D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4F02AC22D5DBBE40040B73D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4F02AC92D5DBBE50040B73D;
-			remoteInfo = PlugKit;
-		};
-		D4F02AE62D5DBBE60040B73D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D4F02AC22D5DBBE40040B73D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D4F02AC92D5DBBE50040B73D;
-			remoteInfo = PlugKit;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		D4F02ACA2D5DBBE50040B73D /* PlugKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlugKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F02ADB2D5DBBE60040B73D /* PlugKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlugKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D4F02AE52D5DBBE60040B73D /* PlugKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlugKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		D4F02AF92D5DBD620040B73D /* Exceptions for "PlugKit" folder in "PlugKit" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = D4F02AC92D5DBBE50040B73D /* PlugKit */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		D4F02ACC2D5DBBE50040B73D /* PlugKit */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				D4F02AF92D5DBD620040B73D /* Exceptions for "PlugKit" folder in "PlugKit" target */,
+			);
 			path = PlugKit;
-			sourceTree = "<group>";
-		};
-		D4F02ADE2D5DBBE60040B73D /* PlugKitTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PlugKitTests;
-			sourceTree = "<group>";
-		};
-		D4F02AE82D5DBBE60040B73D /* PlugKitUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = PlugKitUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D4F02AC72D5DBBE50040B73D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F02AD82D5DBBE60040B73D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F02AE22D5DBBE60040B73D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -76,8 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				D4F02ACC2D5DBBE50040B73D /* PlugKit */,
-				D4F02ADE2D5DBBE60040B73D /* PlugKitTests */,
-				D4F02AE82D5DBBE60040B73D /* PlugKitUITests */,
 				D4F02ACB2D5DBBE50040B73D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				D4F02ACA2D5DBBE50040B73D /* PlugKit.app */,
-				D4F02ADB2D5DBBE60040B73D /* PlugKitTests.xctest */,
-				D4F02AE52D5DBBE60040B73D /* PlugKitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,52 +83,6 @@
 			productReference = D4F02ACA2D5DBBE50040B73D /* PlugKit.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D4F02ADA2D5DBBE60040B73D /* PlugKitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4F02AF22D5DBBE60040B73D /* Build configuration list for PBXNativeTarget "PlugKitTests" */;
-			buildPhases = (
-				D4F02AD72D5DBBE60040B73D /* Sources */,
-				D4F02AD82D5DBBE60040B73D /* Frameworks */,
-				D4F02AD92D5DBBE60040B73D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D4F02ADD2D5DBBE60040B73D /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D4F02ADE2D5DBBE60040B73D /* PlugKitTests */,
-			);
-			name = PlugKitTests;
-			packageProductDependencies = (
-			);
-			productName = PlugKitTests;
-			productReference = D4F02ADB2D5DBBE60040B73D /* PlugKitTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		D4F02AE42D5DBBE60040B73D /* PlugKitUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4F02AF52D5DBBE60040B73D /* Build configuration list for PBXNativeTarget "PlugKitUITests" */;
-			buildPhases = (
-				D4F02AE12D5DBBE60040B73D /* Sources */,
-				D4F02AE22D5DBBE60040B73D /* Frameworks */,
-				D4F02AE32D5DBBE60040B73D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D4F02AE72D5DBBE60040B73D /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				D4F02AE82D5DBBE60040B73D /* PlugKitUITests */,
-			);
-			name = PlugKitUITests;
-			packageProductDependencies = (
-			);
-			productName = PlugKitUITests;
-			productReference = D4F02AE52D5DBBE60040B73D /* PlugKitUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -176,14 +96,6 @@
 					D4F02AC92D5DBBE50040B73D = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					D4F02ADA2D5DBBE60040B73D = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = D4F02AC92D5DBBE50040B73D;
-					};
-					D4F02AE42D5DBBE60040B73D = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = D4F02AC92D5DBBE50040B73D;
-					};
 				};
 			};
 			buildConfigurationList = D4F02AC52D5DBBE40040B73D /* Build configuration list for PBXProject "PlugKit" */;
@@ -195,34 +107,20 @@
 			);
 			mainGroup = D4F02AC12D5DBBE40040B73D;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = D4F02ACB2D5DBBE50040B73D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				D4F02AC92D5DBBE50040B73D /* PlugKit */,
-				D4F02ADA2D5DBBE60040B73D /* PlugKitTests */,
-				D4F02AE42D5DBBE60040B73D /* PlugKitUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D4F02AC82D5DBBE50040B73D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F02AD92D5DBBE60040B73D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F02AE32D5DBBE60040B73D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -239,34 +137,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D4F02AD72D5DBBE60040B73D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D4F02AE12D5DBBE60040B73D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		D4F02ADD2D5DBBE60040B73D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4F02AC92D5DBBE50040B73D /* PlugKit */;
-			targetProxy = D4F02ADC2D5DBBE60040B73D /* PBXContainerItemProxy */;
-		};
-		D4F02AE72D5DBBE60040B73D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D4F02AC92D5DBBE50040B73D /* PlugKit */;
-			targetProxy = D4F02AE62D5DBBE60040B73D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D4F02AED2D5DBBE60040B73D /* Debug */ = {
@@ -399,11 +270,17 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PlugKit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlugKit/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App needs Bluetooth access to connect to the smart plug";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This app requires access to Bluetooth to connect and control the smart plug";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "This app requires access to Bluetooth to connect and control the smart plug";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PlugKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -424,80 +301,22 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PlugKit/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlugKit/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "App needs Bluetooth access to connect to the smart plug";
+				INFOPLIST_KEY_NSBluetoothPeripheralUsageDescription = "This app requires access to Bluetooth to connect and control the smart plug";
+				INFOPLIST_KEY_NSFileProviderDomainUsageDescription = "This app requires access to Bluetooth to connect and control the smart plug";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PlugKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		D4F02AF32D5DBBE60040B73D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PlugKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlugKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlugKit";
-			};
-			name = Debug;
-		};
-		D4F02AF42D5DBBE60040B73D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PlugKitTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlugKit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PlugKit";
-			};
-			name = Release;
-		};
-		D4F02AF62D5DBBE60040B73D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PlugKitUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = PlugKit;
-			};
-			name = Debug;
-		};
-		D4F02AF72D5DBBE60040B73D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.personal.PlugKitUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = PlugKit;
 			};
 			name = Release;
 		};
@@ -518,24 +337,6 @@
 			buildConfigurations = (
 				D4F02AF02D5DBBE60040B73D /* Debug */,
 				D4F02AF12D5DBBE60040B73D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4F02AF22D5DBBE60040B73D /* Build configuration list for PBXNativeTarget "PlugKitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4F02AF32D5DBBE60040B73D /* Debug */,
-				D4F02AF42D5DBBE60040B73D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4F02AF52D5DBBE60040B73D /* Build configuration list for PBXNativeTarget "PlugKitUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D4F02AF62D5DBBE60040B73D /* Debug */,
-				D4F02AF72D5DBBE60040B73D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
