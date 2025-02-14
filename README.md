@@ -1,6 +1,10 @@
 # 🔌 PlugKit
 A MacOS MenuBar app built with SwiftUI for controlling Philips Hue Smart Plugs via CoreBluetooth.
 
+## Extra
+
+I also create a [Raycast Script Command](https://gist.github.com/maximusdionyssopoulos/d8156ba46a65d51d94dcb86cbf41e311) to control the plug via Raycast.
+
 # Bluetooth Info
 > The device advertises a vendor specific service 932c32bd-0000-47a2-835a-a8d455b859dd, and a power state characteristic 932c32bd-0002-47a2-835a-a8d455b859dd. The characteristic has the value 0x00 when the plug is turned off, and 0x01 when the plug is turned on.
 
